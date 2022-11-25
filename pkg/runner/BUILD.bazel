@@ -12,6 +12,7 @@ go_library(
         "path_existence_checking_runner.go",
         "temporary_directory_installing_runner.go",
         "temporary_directory_symlinking_runner.go",
+        "xcode_select_runner.go",
     ],
     importpath = "github.com/buildbarn/bb-remote-execution/pkg/runner",
     visibility = ["//visibility:public"],
