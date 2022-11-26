@@ -126,7 +126,9 @@ func main() {
 			cleaner.NewIdleInvoker(cleaner.NewChainedCleaner(cleaners)))
 	}
 
-	r = runner.NewXcodeSelectRunner(r)
+	if configuration.EnableXcodeSelect {
+		r = runner.NewXcodeSelectRunner(r)
+	}
 
 	// Paths that need to be present for the worker to be healthy.
 	if len(configuration.ReadinessCheckingPathnames) > 0 {

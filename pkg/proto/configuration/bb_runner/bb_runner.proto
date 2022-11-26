@@ -91,4 +91,6 @@ message ApplicationConfiguration {
   // there is an inherent performance penalty. If possible, use the built-in
   // cleaning options that are handled in-process for optimal performance.
   repeated string run_command_cleaner = 13;
+
+  bool enable_xcode_select = 14;
 }
